@@ -13,7 +13,7 @@ body {
   background-size: 80px;
   background-image: var(--body-bg-image);
 }
-/*uni-select*/
+
 * {
   box-sizing: border-box;
 }
@@ -78,12 +78,12 @@ h1 {
 
 }
 
-/*border bar*/
+
 .tabs-left {
   border-bottom: none;
   border-right: 1px solid #c3c3c3;
 }
-/*float spacing*/
+
 .tabs-left>li {
   float: none;
  margin:0px;
@@ -100,10 +100,10 @@ h1 {
   margin:0px;
 }
 .nav-tabs>li>a:hover {
-    /* margin-right: 2px; */
+   
     line-height: 1.5;
     border: 1px solid transparent;
-    /* border-radius: 4px 4px 0 0; */
+  
 }
 .tabs-left>li.active>a::after{content: "";
     position: absolute;
@@ -111,7 +111,7 @@ h1 {
     right: -10px;
     border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  /*triangle*/
+  /*tip*/
   border-left: 10px solid #FFB95D;
     display: block;
     width: 0;}
