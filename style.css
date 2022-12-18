@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+
+    --bg-color: rgb(9, 4, 26);
+    --alt-bgcolor: transparent;
+    --text-color: #a7a2a2;
+    --border-color: rgb(211, 211, 211,0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#parent-frame {
+    display:flex;
+   
+}
+
+/*Start Left Sidebar*/
+.sidebar-static {
+    width: 20em;
+    flex: 0 1 auto; /* should fill to end vertically*/
+    background: #121212;
+    float: left;
+}
+
+#musicsection {
+    overflow: hidden;
+    flex: 1;
+    padding: 10px;
+   
+}
+
+#musicsection ul {
+    list-style: none;
+    margin-left: -27px
+}
+
+.spotify-titles h3 {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: white;
+}
+
+#musicsection li, 
+.liked-bord {
+    margin: 12px 0;
+    color: var(--text-color);
+    font-size: 13px;
+  
+        
+}
+a{
+    color:var(--text-color);
+    text-decoration:none;
+}
+ a:hover{
+
+    color:white;
+}
+.fadetext:hover {
+   
+     text-decoration: none;
+    animation: fade-in-out 2s ease-in-out infinite alternate;
+    -webkit-animation: fade-in-out 2s ease-in-out infinite alternate;
+
+}
+
+#musicsection li:hover,
+.liked-bord:hover {
+    color: white;
+}
+
+
+#musicsection::-webkit-scrollbar {
+    width: 1em;
+}
+
+#musicsection::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.liked-song-custom {
+    height: 59px;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    background: #121212;
+    display: block;
+   
+}
+.sidebar-section {
+    margin-bottom: 40px;
+}
+.liked-bord{
+
+    margin-left: 1em;
+}
+
+/*End Left Sidebar*/
+
+/*Start Content Right*/
+.main-container-right {
+    height: 100vh;
+    width: 100vw;
+    background: #181818;
+    float: left;
+    display: block;
+}
+
+#right-section {
+    overflow-x: hidden; /*remove horizontal scroll*/
+    flex-grow: 2;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#spotify-header-info {
+    
+    height: 16em;
+    position: relative;
+    background: #181818;
+    margin-left: -10px;
+    margin-top: -10px;
+    z-index: 9999999;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#spotify-header-info img {
+    width: 10em;
+    margin: 30px 15px 25px 60px;
+    
+}
+
+#spotify-header-info h2 {
+    display: inline-block;
+    color: white;
+    vertical-align: top;
+    margin-top: 13px;
+    margin-left: 20px;
+    font-size: 4.375em;
+}
+
+#spotify-header-info span {
+    vertical-align: middle;
+    /*webtitletxt*/
+    margin-top: 20px;
+}
+
+
+.play-button{
+
+    margin-left: 2em;
+        margin-top: 2em;
+        height: 6em;
+        width: 6em;
+        display: inline-block;
+        background-color: transparent;
+        border-color: transparent;
+
+}
+.play-button img{
+    
+    height: 5em;
+    width: 5em;
+ 
+    display: inline-block;
+    background-color: transparent;
+      
+}
+.play-button:hover{
+
+    background-image:url('DRAFT_slicedorange1024.png');
+}
+
+#over-row-category {
+    height: 25px;
+    width:100%;
+    background: transparent;
+    margin-top:1.4em;
+    position: relative;
+    margin-left: 25px;
+    border-bottom: grey;
+}
+
+.row-number,
+.row-title,
+.row-album {
+    background: transparent;
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 12px;
+}
+.row-number{
+
+    margin-left: 1em;
+}
+.row-title {
+    width: 15.625em;
+    margin-left: 6.3em;
+   
+}
+
+.row-album {
+    width: 15.625em;
+    margin-left: 12.6em;
+    
+}
+
+#song-list{
+
+    flex: 1 1 auto;
+
+}
+
+#right-section ul {
+    list-style: none;
+    margin-left: -39px;
+    margin-top: -22px;
+}
+
+
+#right-section li {
+    color: white;
+    font-size: 13px;
+    width: 90%;
+    margin: auto;
+    padding: 15px 0;
+    border-top: .5px solid var(--border-color);
+    border-bottom: .5px solid var(--border-color);
+    background: transparent;
+}
+
+#right-section li:hover {
+    background: #282828;
+}
+
+#right-section li span {
+    padding: 0 26px 0 60px;
+}
+
+#right-section::-webkit-scrollbar-thumb {
+    background-color: rgb(51, 51, 51);
+}
+
+#right-section::-webkit-scrollbar {
+    width: 1em;
+}
+
+#right-section::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade-in-out {
+
+    0%,
+    100% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fade-in-out {
+
+    0%,
+    100% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+@keyframes rumble {
+
+    0%,
+    100% {}
+
+    50% {
+        transform: translateY(-0.2em)
+    }
+}
+
+@-webkit-keyframes rumble {
+
+    0%,
+    100% {}
+
+    50% {
+        -webkit-transform: translateY(-0.2em)
+    }
+}
+
+@keyframes shudder {
+
+    0%,
+    100% {}
+
+    50% {
+        transform: translateX(0.2em)
+    }
+}
+
+@-webkit-keyframes shudder {
+
+    0%,
+    100% {}
+
+    50% {
+        -webkit-transform: translateX(0.2em)
+    }
+}
+
+.del {
+    background-color: #000;
+    /* data expunged*/
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.blink {
+    text-decoration: none;
+    animation: fade-in-out 1s steps(1, end) infinite alternate;
+    -webkit-animation: fade-in-out 1s steps(1, end) infinite alternate;
+}
+
+.box {
+    border: 1px solid #222;
+    border-radius: 0.1em;
+}
+
+.fade-in-out {
+    text-decoration: none;
+    animation: fade-in-out 2s ease-in-out infinite alternate;
+    -webkit-animation: fade-in-out 2s ease-in-out infinite alternate;
+}
+
+.rumble {
+    -webkit-animation: rumble linear 0.1s 0s infinite;
+    animation: rumble linear 0.1s 0s infinite;
+    display: inline-block;
+}
+
+.shudder {
+    -webkit-animation: shudder linear 0.1s 0s infinite;
+    animation: shudder linear 0.1s 0s infinite;
+    display: inline-block;
+}
